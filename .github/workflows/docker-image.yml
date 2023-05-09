@@ -24,3 +24,5 @@ jobs:
       run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/nfsd
     - name: docker push
       run: docker push ${{secrets.DOCKER_USER}}/nfsd
+    - name: docker push readme
+      run: docker pushrm ${{secrets.DOCKER_USER}}/nfsd
