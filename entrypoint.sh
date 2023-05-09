@@ -8,6 +8,11 @@ function stop() {
 
 trap stop SIGTERM SIGINT
 
+if [ -d "/etc/exports" ]; then
+    echo "Error /etc/exports is a directory"
+    exit 1
+fi
+
 touch /etc/exports
 if [ ! -s "/etc/exports" ]; then
     echo "$NFS_DEFAULT_DIR $NFS_DEFAULT_DOMAIN($NFS_DEFAULT_OPTIONS)" > /etc/exports
