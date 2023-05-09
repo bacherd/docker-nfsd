@@ -21,12 +21,12 @@ docker run --name websvn -d \
 websvn:
    image: bacherd/nfsd
    ports:
-     - 111:111/tcp                                                                                                                                                          
-     - 111:111/udp                                                                                                                                                          
-     - 2049:2049/tcp                                                                                                                                                        
-     - 2049:2049/udp                                                                                                                                                        
-   cap_add:                                                                                                                                                                              
-     - SYS_ADMIN                                                                                                                                                                         
+     - 111:111/tcp
+     - 111:111/udp
+     - 2049:2049/tcp
+     - 2049:2049/udp
+   cap_add:
+     - SYS_ADMIN 
      - SETPCAP        
    environment:
      - NFS_DEFAULT_DIR=/data/
