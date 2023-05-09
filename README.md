@@ -29,9 +29,9 @@ websvn:
      - SYS_ADMIN                                                                                                                                                                         
      - SETPCAP        
    environment:
-     - NFS_DEFAULT_DIR="/data/"
-     - NFS_DEFAULT_DOMAIN="*"
-     - NFS_DEFAULT_OPTIONS="rw,fsid=0,sync,no_subtree_check,no_auth_nlm,insecure,no_root_squash,crossmnt,no_acl"
+     - NFS_DEFAULT_DIR=/data/
+     - NFS_DEFAULT_DOMAIN=*
+     - NFS_DEFAULT_OPTIONS=rw,fsid=0,sync,no_subtree_check,no_auth_nlm,insecure,no_root_squash,crossmnt,no_acl
    volumes:
      - ./nfsd/exports:/etc/exports
      - /data:/data
@@ -40,8 +40,8 @@ websvn:
 
 ## configure
 
-| Environment         | Default                                                |
-|---------------------|--------------------------------------------------------|
-| NFS_DEFAULT_DIR     | "/data/"                                               |
-| NFS_DEFAULT_DOMAIN  | "*"                                                    |
-| NFS_DEFAULT_OPTIONS | "rw,fsid=0,sync,no_subtree_check,no_auth_nlm, insecure,no_root_squash,crossmnt,no_acl" |
+| Environment         | Default                                              |
+|---------------------|------------------------------------------------------|
+| NFS_DEFAULT_DIR     | /data/                                               |
+| NFS_DEFAULT_DOMAIN  | *                                                    |
+| NFS_DEFAULT_OPTIONS | rw,fsid=0,sync,no_subtree_check,no_auth_nlm, insecure,no_root_squash,crossmnt,no_acl |
